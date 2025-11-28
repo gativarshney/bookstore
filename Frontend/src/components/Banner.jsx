@@ -16,7 +16,7 @@ const Banner = () => {
               new. Dive in, stay focused, and let's level up—one small step at a
               time.
             </p>
-            <label className="input validator md:w-3/5 w-full border-none focus-within:outline-none">
+            <label className="input validator md:w-1/2 w-full border border-gray-300 dark:border-gray-600 rounded-md focus-within:outline-none">
               <svg
                 className="h-[1em] opacity-50"
                 xmlns="http://www.w3.org/2000/svg"
@@ -35,13 +35,13 @@ const Banner = () => {
               </svg>
               <input
                 type="email"
-                placeholder="Email"
-                className="outline-none focus:outline-none"
+                placeholder="Enter Email for Subscribing"
+                className="outline-none focus:outline-none px-2 py-1 bg-transparent"
                 required
               />
             </label>
           </div>
-          <button className="btn btn-secondary mt-10">Secondary</button>
+          <button className="btn btn-secondary mt-10">Submit</button>
         </div>
         <div className="order-1 w-full md:w-1/2 flex items-center justify-center">
             <img src={banner} className="mt-5 w-80 md:w-116 "  alt="bannerImage" />

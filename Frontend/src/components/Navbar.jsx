@@ -1,25 +1,44 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [sticky, setSticky] = useState(false);
+
+  useEffect(()=>{
+    const handleScroll = ()=>{
+      if(window.scrollY > 0){
+        setSticky(true);
+      }
+      else{
+        setSticky(false);
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+    return ()=>{
+      window.removeEventListener("scroll", handleScroll);
+    }
+  }, [])
+
   const navItems = (
     <>
       <li>
         <a>Home</a>
       </li>
       <li>
-        <a>Course</a>
+        <a>Articles</a>
       </li>
       <li>
-        <a>About</a>
+        <a>Collections</a>
       </li>
       <li>
-        <a>Contact</a>
+        <a>Events</a>
       </li>
     </>
   );
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
+      <div className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 ${sticky? "sticky-navbar shadow-md bg-base-200 duation-300 transition-all ease-in-out" : ""} `} >
         <div className="navbar bg-base-80 shadow-sm">
           <div className="navbar-start">
             <div className="dropdown">
@@ -58,7 +77,7 @@ const Navbar = () => {
               <ul className="menu menu-horizontal px-1">{navItems}</ul>
             </div>
             <div className="hidden md:block">
-              <label className="input border-none focus-within:outline-none">
+              <label className="input border border-gray-300 dark:border-gray-600 rounded-md focus-within:outline-none">
                 <svg
                   className="h-[1em] opacity-50"
                   xmlns="http://www.w3.org/2000/svg"
@@ -75,16 +94,15 @@ const Navbar = () => {
                     <path d="m21 21-4.3-4.3"></path>
                   </g>
                 </svg>
-                <input type="search" className="outline-none focus:outline-none" required placeholder="Search" />
+                <input type="search" className="outline-none focus:outline-none px-2 py-1 bg-transparent" required placeholder="Search" />
               </label>
             </div>
             <div>
               <label className="swap swap-rotate">
-                {/* this hidden checkbox controls the state */}
                 <input
                   type="checkbox"
                   className="theme-controller"
-                  value="synthwave"
+                  value="light"
                 />
 
                 {/* sun icon */}
