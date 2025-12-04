@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Academic",
+        "description": "Textbooks, references, and guides for school, college, and professional learning.",
+        "price": 0,
+        "category": "Free",
+        "image": "../public/books1.png"
+    },
+    {
+        "id": 2,
+        "name": "Business & Economics",
+        "description": "Entrepreneurship, finance, marketing, and management strategies for success.",
+        "price": 0,
+        "category": "Free",
+        "image": "../public/books1.png"
+    },
+    {
+        "id": 3,
+        "name": "Comics & Graphic Novels",
+        "description": "Illustrated adventures, manga, and superhero stories with vibrant art.",
+        "price": 0,
+        "category": "Free",
+        "image": "../public/books1.png"
+    },
+    {
+        "id": 4,
+        "name": "Best Sellers",
+        "description": "Highlight trending books loved by readers worldwide.",
+        "price": 500,
+        "category": "Paid",
+        "image": "../public/books1.png"
+    },
+    {
+        "id": 5,
+        "name": "New Arrivals",
+        "description": "Showcase fresh releases and the latest additions to shelves.",
+        "price": 400,
+        "category": "Paid",
+        "image": "../public/books1.png"
+    },
+    {
+        "id": 6,
+        "name": "Award Winners",
+        "description": " Celebrated titles like Booker, Pulitzer, and other literary honors.",
+        "price": 550,
+        "category": "Paid",
+        "image": "../public/books1.png"
+    },
+    {
+        "id": 7,
+        "name": "Seasonal Collections",
+        "description": "Curated reads for holidays, winter nights, or summer adventures.",
+        "price": 0,
+        "category": "Free",
+        "image": "../public/books1.png"
+    }
+]
