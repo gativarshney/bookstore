@@ -4,12 +4,12 @@ const Card = ({ item }) => {
   return (
     <>
       <div className="mt-1 mb-10 mr-5 ml-5 ">
-        <div className="card bg-base-100 w-full shadow-xl ">
+        <div className="card size-95 bg-base-100 w-full shadow-xl hover:scale-105 duration-400">
         <figure>
           <img
             src={item.image}
             alt={item.name}
-            className="h-80"
+            className="h-70"
           />
         </figure>
         <div className="card-body">
