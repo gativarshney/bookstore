@@ -3,7 +3,7 @@ import React from "react";
 const Card = ({ item }) => {
   return (
     <>
-      <div className="mt-1 mb-10 mr-5 ml-5 ">
+      <div className="mt-1 mb-10 mr-5 ml-5">
         <div className="card size-95 bg-base-100 w-full shadow-xl hover:scale-105 duration-400">
         <figure>
           <img

@@ -54,5 +54,13 @@
         "price": 0,
         "category": "Free",
         "image": "../public/books1.png"
+    },
+    {
+        "id": 8,
+        "name": "Random Collections",
+        "description": "Curated reads for random holidays, winter nights, or summer adventures.",
+        "price": 0,
+        "category": "Free",
+        "image": "../public/books1.png"
     }
 ]

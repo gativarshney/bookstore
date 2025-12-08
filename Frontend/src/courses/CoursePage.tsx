@@ -14,7 +14,7 @@ const CoursePage = () => {
               <button className='bg-pink-500 px-3 py-2 rounded font-bold my-3 cursor-pointer mb-10'>Back</button>
             </Link>
         </div>
-        <div className='nt-10 grid grid-cols-1 md:grid-cols-4 '>
+        <div className='grid grid-cols-1 md:grid-cols-4 '>
           {list.map((item, id)=>{
             return <Card key={id} item={item}/>
           })}
