@@ -1,10 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Login from "./Login";
 import { useForm } from "react-hook-form";
 import Navbar from "./Navbar";
 
-const Signup = () => {
+const Contact = () => {
   const {
     register,
     handleSubmit,
@@ -12,13 +10,14 @@ const Signup = () => {
   } = useForm();
 
   const onSubmit = (data) => console.log(data);
+
   return (
     <>
-      <Navbar />
+        <Navbar/>
       <div className="flex flex-col h-screen items-center justify-center ">
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form method="dialog" onSubmit={handleSubmit(onSubmit)}>
           <div className="border-black rounded-xl shadow-2xl p-5">
-            <h3 className="font-bold text-lg mb-4">Signup</h3>
+            <h3 className="font-bold text-lg mb-4">Contact Us</h3>
             <div>
               <div className="my-2">Name</div>
               <input
@@ -48,40 +47,22 @@ const Signup = () => {
                 </span>
               )}
               <br />
-              <div className="my-2">Password</div>
-              <input
+              <div className="my-2">Message</div>
+              <textarea
                 className="px-3 py-2 w-80 rounded border"
-                type="password"
-                placeholder="Enter your Password"
-                {...register("password", { required: true })}
+                type="text"
+                placeholder="Enter your Message"
+                {...register("message", { required: true })}
               />
               <br />
-              {errors.password && (
+              {errors.message && (
                 <span className="text-sm text-red-500">
                   This field is required
                 </span>
               )}
+              <br />
             </div>
-            <div className="flex align-middle justify-around mt-4 ">
-              <button className="btn btn-secondary">SignUp</button>
-              <p className="mt-2 ml-2">
-                Already have account?{" "}
-                <button
-                  className="text-blue-500 cursor-pointer underline"
-                  onClick={() => {
-                    document.getElementById("my_modal_5").showModal();
-                  }}
-                >
-                  Login
-                </button>
-                <Login />
-              </p>
-            </div>
-            <div className="modal-action">
-              <Link method="dialog" to={"/"}>
-                <button className="btn">Close</button>
-              </Link>
-            </div>
+          <button method="dialog" className="btn btn-secondary mt-4">Submit</button>
           </div>
         </form>
       </div>
@@ -89,4 +70,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Contact;
