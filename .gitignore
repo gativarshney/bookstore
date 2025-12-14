@@ -1,4 +1,5 @@
 node_modules/
+.env
 
 # Logs
 logs
@@ -25,16 +26,16 @@ dist-ssr
 *.sln
 *.sw?
 
-.env
 .vite
 .DS_Store
 
 
 # Frontend ignores
-frontend/node_modules/
-frontend/build/
+Frontend/node_modules/
+Frontend/build/
 
 # Backend ignores
-backend/node_modules/
-backend/dist/
-backend/.env
+Backend/node_modules/
+Backend/.env
+Backend/dist/
+Backend/build/
